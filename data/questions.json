@@ -1,5 +1,5 @@
 {
-  "questions": [
+  "React": [
     {
       "question": "Which is the most popular JavaScript framework?",
       "options": ["Angular", "React", "Svelte", "Vue"],
@@ -135,5 +135,170 @@
       "correctOption": 3,
       "points": 20
     }
-  ]
+  ],
+  "highscoreReact": {
+    "value": 0
+  },
+  "PHP": [
+    {
+      "question": "What number is the first key of a PHP’s numerical array?",
+      "options": ["-1", "2", "1", "0"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which of the following is not a Superglobal in PHP?",
+      "options": ["$_SERVER", "$_PUT", "$_FILES", "$_ENV"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which of the following method acts as a destructor function in a PHP class?",
+      "options": ["class_name()", "__destruct", "destructor", "destructor()"],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Which of the functions is used to sort an array in descending order?",
+      "options": ["asort()", "dsort()", "rsort()", "sort()"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which of the following is correct about PHP?",
+      "options": [
+        "PHP is a recursive acronym for \"PHP: Hypertext Preprocessor\".",
+        "PHP is a server side scripting language that is embedded in HTML.",
+        "It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites.",
+        "All of the mentioned."
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which superglobal variable holds information about headers, paths, and script locations?",
+      "options": ["$_GLOBALS", "$_SERVER", "$_SESSION", "$_GET"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "How can we set infinite execution time for a PHP script?",
+      "options": [
+        "Add set_time_limit() at the beginning of a script",
+        "Add set_time_limit(infinity) at the beginning of a script",
+        "Add set_time_limit(0) at the beginning of a script"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "How to protect special characters in a query string?",
+      "options": ["urlencode()", "url_encode()", "urlbypass()"],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What is the default execution time set in set_time_limit()?",
+      "options": ["20 secs", "30 secs", "40 secs", "35 secs"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which of the following is used to destroy the session?",
+      "options": [
+        "session_start() function",
+        "$_SESSION[]",
+        "isset() function",
+        "session_destroy() function"
+      ],
+      "correctOption": 3,
+      "points": 10
+    }
+  ],
+  "highscorePHP": {
+    "value": 0
+  },
+  "JavaScript": [
+    {
+      "question": "How do you write \"Hello World\" in an alert box?",
+      "options": [
+        "msgBox(\"Hello World\");",
+        "alert(\"Hello World\");",
+        "msg(\"Hello World\");",
+        "alertBox(\"Hello World\");"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "options": ["<javascript>", "<script>", "<js>", "<scripting>"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the correct JavaScript syntax to change the content of the HTML element below?",
+      "options": [
+        "#demo.innerHTML = \"Hello World!\";",
+        "document.getElementById(\"demo\").innerHTML = \"Hello World!\";",
+        "document.getElement(\"p\").innerHTML = \"Hello World!\";",
+        "document.getElementByName(\"p\").innerHTML = \"Hello World!\";"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "How do you call a function named \"myFunction\"?",
+      "options": [
+        "myFunction()",
+        "call myFunction()",
+        "call function myFunction()"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which event occurs when the user clicks on an HTML element?",
+      "options": ["onchange", "onmouseclick", "onmouseover", "onclick"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "How do you find the number with the highest value of x and y?",
+      "options": [
+        "ceil(x, y)",
+        "Math.ceil(x, y)",
+        "Math.max(x, y)",
+        "top(x, y)"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "How can you detect the client's browser name?",
+      "options": ["browser.name", "navigator.appName", "client.navName"],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "What will the following code return: Boolean(10 > 9)",
+      "options": ["true", "NaN", "false"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Where is the correct place to insert a JavaScript?",
+      "options": [
+        "The <head> section",
+        "The <body> section",
+        "The <footer>",
+        "Both the <head> section and the <body> section are correct"
+      ],
+      "correctOption": 3,
+      "points": 20
+    }
+  ],
+  "highscoreJavaScript": {
+    "value": 0
+  }
 }

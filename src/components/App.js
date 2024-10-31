@@ -10,6 +10,7 @@ import FinishScreen from "./FinishScreen";
 import NextButton from "./NextButton";
 import Footer from "./Footer";
 import Timer from "./Timer";
+import SelectCategory from "./SelectCategory";
 
 const SECS_PER_QUESTION = 30;
 
@@ -21,14 +22,34 @@ const initialState = {
   points: 0,
   highscore: 0,
   secondsRemaining: null,
+  category: "React",
 };
 
 function reducer(state, action) {
+  function saveHighscoreToDataBase(newHighscore) {
+    fetch(`http://localhost:8000/highscore${state.category}`, {
+      method: "PUT",
+      body: JSON.stringify({ value: newHighscore }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    return newHighscore;
+  }
+
   switch (action.type) {
     case "dataRecived":
-      return { ...state, questions: action.payload, status: "ready" };
+      return {
+        ...state,
+        questions: action.payload[0],
+        status: "ready",
+        highscore: action.payload[1].value,
+      };
     case "dataFailed":
       return { ...state, status: "error" };
+    case "setCategory":
+      return { ...state, category: action.payload };
     case "start":
       return {
         ...state,
@@ -52,14 +73,17 @@ function reducer(state, action) {
         ...state,
         status: "finished",
         highscore:
-          state.points > state.highscore ? state.points : state.highscore,
+          state.points > state.highscore
+            ? saveHighscoreToDataBase(state.points)
+            : state.highscore,
       };
 
     case "restart":
       return {
         ...initialState,
-        highscore: state.highscore,
         questions: state.questions,
+        highscore: state.highscore,
+        category: state.category,
         status: "ready",
       };
     case "tick":
@@ -76,30 +100,60 @@ function reducer(state, action) {
 
 export default function App() {
   const [
-    { questions, status, index, answer, points, highscore, secondsRemaining },
+    {
+      questions,
+      status,
+      index,
+      answer,
+      points,
+      highscore,
+      secondsRemaining,
+      category,
+    },
     dispatch,
   ] = useReducer(reducer, initialState);
+
+  useEffect(
+    function () {
+      async function getQuestions() {
+        const res = await fetch(`http://localhost:8000/${category}`);
+        const data = await res.json();
+        return data;
+      }
+
+      async function getHighscore() {
+        const res = await fetch(`http://localhost:8000/highscore${category}`);
+        const data = await res.json();
+        return data;
+      }
+
+      Promise.all([getQuestions(), getHighscore()])
+        .then((data) => dispatch({ type: "dataRecived", payload: data }))
+        .catch((err) => dispatch({ type: "dataFailed" }));
+    },
+    [category, dispatch]
+  );
+
   const numQuestions = questions.length;
   const maxPossiblePoints = questions.reduce(
     (prev, curr) => prev + curr.points,
     0
   );
 
-  useEffect(function () {
-    fetch("http://localhost:8000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataRecived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
-  }, []);
-
   return (
     <div className="app">
-      <Header />
+      <Header category={category} />
       <Main>
         {status === "loading" && <Loader />}
         {status === "error" && <Error />}
         {status === "ready" && (
-          <StartScreen numQuestions={numQuestions} dispatch={dispatch} />
+          <StartScreen
+            numQuestions={numQuestions}
+            dispatch={dispatch}
+            category={category}
+          >
+            <SelectCategory dispatch={dispatch} category={category} />
+          </StartScreen>
         )}
         {status === "active" && (
           <>

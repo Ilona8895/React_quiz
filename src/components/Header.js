@@ -1,8 +1,12 @@
-function Header() {
+function Header({ category }) {
   return (
-    <header className='app-header'>
-      <img src='logo512.png' alt='React logo' />
-      <h1>The React Quiz</h1>
+    <header className="app-header">
+      {category === "React" && <img src="logo512.png" alt="React logo" />}
+      {category === "PHP" && <img src="php_logo.png" alt="PHP logo" />}
+      {category === "JavaScript" && (
+        <img src="js_logo.png" alt="JavaScript logo" />
+      )}
+      <h1>The {category} Quiz</h1>
     </header>
   );
 }
