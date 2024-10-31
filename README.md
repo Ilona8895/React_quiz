@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm run server`
 
-Runs the API with quiz questions.
+Runs json-server API with quiz questions.
 
 ### `npm start`
 
