@@ -1,4 +1,7 @@
-function Header({ category }) {
+import { useQuiz } from "../contexts/QuizContext";
+
+function Header() {
+  const { category } = useQuiz();
   return (
     <header className="app-header">
       {category === "React" && <img src="logo512.png" alt="React logo" />}

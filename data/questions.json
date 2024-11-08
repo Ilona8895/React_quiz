@@ -4,25 +4,29 @@
       "question": "Which is the most popular JavaScript framework?",
       "options": ["Angular", "React", "Svelte", "Vue"],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "id": "97b3"
     },
     {
       "question": "Which company invented React?",
       "options": ["Google", "Apple", "Netflix", "Facebook"],
       "correctOption": 3,
-      "points": 10
+      "points": 10,
+      "id": "fa21"
     },
     {
       "question": "What's the fundamental building block of React apps?",
       "options": ["Components", "Blocks", "Elements", "Effects"],
       "correctOption": 0,
-      "points": 10
+      "points": 10,
+      "id": "cc27"
     },
     {
       "question": "What's the name of the syntax we use to describe the UI in React components?",
       "options": ["FBJ", "Babel", "JSX", "ES2015"],
       "correctOption": 2,
-      "points": 10
+      "points": 10,
+      "id": "7e08"
     },
     {
       "question": "How does data flow naturally in React apps?",
@@ -33,13 +37,15 @@
         "The developers decides"
       ],
       "correctOption": 0,
-      "points": 10
+      "points": 10,
+      "id": "fbe7"
     },
     {
       "question": "How to pass data into a child component?",
       "options": ["State", "Props", "PropTypes", "Parameters"],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "id": "13c5"
     },
     {
       "question": "When to use derived state?",
@@ -50,7 +56,8 @@
         "Whenever the state can be computed from another state variable"
       ],
       "correctOption": 3,
-      "points": 30
+      "points": 30,
+      "id": "22e3"
     },
     {
       "question": "What triggers a UI re-render in React?",
@@ -61,7 +68,8 @@
         "Adding event listeners to DOM elements"
       ],
       "correctOption": 2,
-      "points": 20
+      "points": 20,
+      "id": "2e6f"
     },
     {
       "question": "When do we directly \"touch\" the DOM in React?",
@@ -72,7 +80,8 @@
         "Almost never"
       ],
       "correctOption": 3,
-      "points": 20
+      "points": 20,
+      "id": "0bb6"
     },
     {
       "question": "In what situation do we use a callback to update state?",
@@ -83,7 +92,8 @@
         "When the new state depends on the previous state"
       ],
       "correctOption": 3,
-      "points": 30
+      "points": 30,
+      "id": "7eaa"
     },
     {
       "question": "If we pass a function to useState, when will that function be called?",
@@ -94,13 +104,15 @@
         "The first time we update the state"
       ],
       "correctOption": 2,
-      "points": 30
+      "points": 30,
+      "id": "808d"
     },
     {
       "question": "Which hook to use for an API request on the component's initial render?",
       "options": ["useState", "useEffect", "useRef", "useReducer"],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "id": "df72"
     },
     {
       "question": "Which variables should go into the useEffect dependency array?",
@@ -111,7 +123,8 @@
         "All variables needed for clean up"
       ],
       "correctOption": 2,
-      "points": 30
+      "points": 30,
+      "id": "8c9d"
     },
     {
       "question": "An effect will always run on the initial render.",
@@ -122,7 +135,8 @@
         "In depends on the code in the effect"
       ],
       "correctOption": 0,
-      "points": 30
+      "points": 30,
+      "id": "259c"
     },
     {
       "question": "When will an effect run if it doesn't have a dependency array?",
@@ -133,7 +147,8 @@
         "Each time the component is re-rendered"
       ],
       "correctOption": 3,
-      "points": 20
+      "points": 20,
+      "id": "dcb9"
     }
   ],
   "highscoreReact": {
@@ -144,25 +159,29 @@
       "question": "What number is the first key of a PHP’s numerical array?",
       "options": ["-1", "2", "1", "0"],
       "correctOption": 3,
-      "points": 10
+      "points": 10,
+      "id": "d594"
     },
     {
       "question": "Which of the following is not a Superglobal in PHP?",
       "options": ["$_SERVER", "$_PUT", "$_FILES", "$_ENV"],
       "correctOption": 1,
-      "points": 20
+      "points": 20,
+      "id": "ffe8"
     },
     {
       "question": "Which of the following method acts as a destructor function in a PHP class?",
       "options": ["class_name()", "__destruct", "destructor", "destructor()"],
       "correctOption": 1,
-      "points": 30
+      "points": 30,
+      "id": "5a1d"
     },
     {
       "question": "Which of the functions is used to sort an array in descending order?",
       "options": ["asort()", "dsort()", "rsort()", "sort()"],
       "correctOption": 2,
-      "points": 10
+      "points": 10,
+      "id": "5081"
     },
     {
       "question": "Which of the following is correct about PHP?",
@@ -173,13 +192,15 @@
         "All of the mentioned."
       ],
       "correctOption": 3,
-      "points": 10
+      "points": 10,
+      "id": "1170"
     },
     {
       "question": "Which superglobal variable holds information about headers, paths, and script locations?",
       "options": ["$_GLOBALS", "$_SERVER", "$_SESSION", "$_GET"],
       "correctOption": 1,
-      "points": 20
+      "points": 20,
+      "id": "aaa5"
     },
     {
       "question": "How can we set infinite execution time for a PHP script?",
@@ -189,19 +210,22 @@
         "Add set_time_limit(0) at the beginning of a script"
       ],
       "correctOption": 2,
-      "points": 20
+      "points": 20,
+      "id": "2d0c"
     },
     {
       "question": "How to protect special characters in a query string?",
       "options": ["urlencode()", "url_encode()", "urlbypass()"],
       "correctOption": 0,
-      "points": 30
+      "points": 30,
+      "id": "1ec1"
     },
     {
       "question": "What is the default execution time set in set_time_limit()?",
       "options": ["20 secs", "30 secs", "40 secs", "35 secs"],
       "correctOption": 1,
-      "points": 20
+      "points": 20,
+      "id": "6146"
     },
     {
       "question": "Which of the following is used to destroy the session?",
@@ -212,7 +236,8 @@
         "session_destroy() function"
       ],
       "correctOption": 3,
-      "points": 10
+      "points": 10,
+      "id": "26f9"
     }
   ],
   "highscorePHP": {
@@ -228,13 +253,15 @@
         "alertBox(\"Hello World\");"
       ],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "id": "b29d"
     },
     {
       "question": "Inside which HTML element do we put the JavaScript?",
       "options": ["<javascript>", "<script>", "<js>", "<scripting>"],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "id": "8d6e"
     },
     {
       "question": "What is the correct JavaScript syntax to change the content of the HTML element below?",
@@ -245,7 +272,8 @@
         "document.getElementByName(\"p\").innerHTML = \"Hello World!\";"
       ],
       "correctOption": 1,
-      "points": 20
+      "points": 20,
+      "id": "4a8f"
     },
     {
       "question": "How do you call a function named \"myFunction\"?",
@@ -255,13 +283,15 @@
         "call function myFunction()"
       ],
       "correctOption": 0,
-      "points": 10
+      "points": 10,
+      "id": "f569"
     },
     {
       "question": "Which event occurs when the user clicks on an HTML element?",
       "options": ["onchange", "onmouseclick", "onmouseover", "onclick"],
       "correctOption": 3,
-      "points": 10
+      "points": 10,
+      "id": "7051"
     },
     {
       "question": "How do you find the number with the highest value of x and y?",
@@ -272,19 +302,22 @@
         "top(x, y)"
       ],
       "correctOption": 2,
-      "points": 20
+      "points": 20,
+      "id": "0118"
     },
     {
       "question": "How can you detect the client's browser name?",
       "options": ["browser.name", "navigator.appName", "client.navName"],
       "correctOption": 1,
-      "points": 30
+      "points": 30,
+      "id": "422c"
     },
     {
       "question": "What will the following code return: Boolean(10 > 9)",
       "options": ["true", "NaN", "false"],
       "correctOption": 0,
-      "points": 10
+      "points": 10,
+      "id": "00c4"
     },
     {
       "question": "Where is the correct place to insert a JavaScript?",
@@ -295,7 +328,8 @@
         "Both the <head> section and the <body> section are correct"
       ],
       "correctOption": 3,
-      "points": 20
+      "points": 20,
+      "id": "c553"
     }
   ],
   "highscoreJavaScript": {
