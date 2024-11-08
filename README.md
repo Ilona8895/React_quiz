@@ -21,7 +21,7 @@ You may also see any lint errors in the console.
 
 ## React third-party packages:
 
-- [Json-server](http://localhost:3000)
+- [Json-server](https://www.npmjs.com/package/json-server))
 
 ## Managing state
 
