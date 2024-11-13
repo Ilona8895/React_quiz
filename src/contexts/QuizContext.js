@@ -18,9 +18,9 @@ function reducer(state, action) {
     case "dataRecived":
       return {
         ...state,
-        questions: action.payload[0],
+        questions: action.payload.questions,
         status: "ready",
-        highscore: action.payload[1].value,
+        highscore: action.payload.highscore,
       };
     case "dataFailed":
       return { ...state, status: "error" };
@@ -118,7 +118,12 @@ function QuizProvider({ children }) {
       }
 
       Promise.all([getQuestions(), getHighscore()])
-        .then((data) => dispatch({ type: "dataRecived", payload: data }))
+        .then((data) =>
+          dispatch({
+            type: "dataRecived",
+            payload: { questions: data[0], highscore: data[1].value },
+          })
+        )
         .catch((err) => dispatch({ type: "dataFailed" }));
     },
     [category, dispatch]
